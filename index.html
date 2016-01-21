@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LanPlan | Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/graphics/joys.ico">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/w2ui-1.4.3.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaPAdkoZeLTO5AttyBl_1SJ3mj-Pa0xgs"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/w2ui-1.4.3.min.js"></script>
+    <script type="text/javascript" src="js/geolocation-marker.js"></script>
+    <script type="text/javascript" src="js/welcome.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/loggedInCheck.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  </head>
+
+  <body style="overflow-y:hidden;">
+    <header class="header" id="headerContainer">
+      <div id="header" class="container">
+        <a href="create.html"><img class="add" title="Create Your Own Party/ Create Your Own Team" data-toggle="tooltip" data-placement="bottom" id="add" src="assets/graphics/add.png" onmouseover="this.src='assets/graphics/addhov.png'" onmouseout="this.src='assets/graphics/add.png'"></a>
+        <a href="profile.html" ><img class="img-circle" title="View Your Profile" data-toggle="tooltip" data-placement="bottom" id="profPic" src="assets/graphics/def_profile.png"></a>
+        <ul id="navBar" class="nav nav-tabs" role="tablist">
+          <li type="button" class="btn" title="Go Home" data-toggle="tooltip" data-placement="bottom"><a href="index.html"><strong>Home</strong></a></li>
+          <li type="button" class="btn" title="Sign In/ Switch Acc." data-toggle="tooltip" data-placement="bottom"><a href="log_in.html">Sign In</a></li>
+          <li type="button" class="btn" title="View Your Teams" data-toggle="tooltip" data-placement="bottom"><a href="teams.html">Your Teams</a></li>
+          <li type="button" class="btn" title="View Your Upcoming Events" data-toggle="tooltip" data-placement="bottom"><a href="events.html">Upcoming Events</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="navbuttonsdd" data-toggle="dropdown">Navigation
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="log_in.html">Sign In</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="teams.html">Your Teams</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="events.html">Upcoming Events</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="profile.html">Your Profile</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="create.html">Create a Party/Team</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <a href="rarepepe.html"><img id="logo" src="assets/graphics/logo.png"></a>
+        <h1 id="titleBig">LanPlan <strong>| Home</strong></h1>
+        <h2 id="titleSmall"><strong>Home</strong></h2>
+        <p id="slogan">Be <strong>anti-</strong>anti-social.</p>
+      </div>
+    </header>
+
+    <div id="wrapper">
+      <div id="mapCanvas"></div>
+      <div id="overMap">
+        <a class="twitter-timeline" width="300" height="400" href="https://twitter.com/hashtag/LanPlan" data-widget-id="680764753183162368">#LanPlan Tweets</a>
+        <!--<a href="#legend">
+          <img src="assets/graphics/legend-icon.png">
+        </a>-->
+        <script>
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+      </div>
+    </div>
+
+    <div id="footerWrapper">
+      <div id="footer">
+        <span id="dev">Developed by <strong><a href="https://twitter.com/_C4R15" target="_blank">@_C4R15</a></strong> and <strong><a href="https://twitter.com/Cj1mck" target="_blank">@Cj1mck</a></strong>.</span>
+      </div>
+    </div>
+
+    <div id="welcomepopup" style="z-index: 10; display: none; width: 650px; height: 485px; overflow: auto">
+    <div rel="title" style="font-size: 48px;">
+        Welcome to LanPlan (beta)!
+    </div>
+    <div rel="body">
+        <div style="padding: 10; font-size: 16px; line-height: 150%; text-align: center;">
+          <p></p><p></p>
+          <p>
+          Welcome to LanPlan, a platform which will help you plan and find nearby LAN parties.
+          With this project we hope to encourage more socialising (in real-life) in the gaming community.
+          At the moment, we are busy with other (boring) work, but hopefully we will be able to continue
+          developing this project.
+          </p>
+          <p>
+          The idea of LanPlan originated from an under 18s hackathon which ran throughout the UK for a week
+          called <a href="http://www.yrs.io/">Young Rewired State</a>, an awesome annual event which I urge anyone
+          who is interested to check out.
+        </p>
+        <p>
+          Well, thanks for dropping by. As I've said, the project is still in early beta, so don't expect everything
+          to run smoothly - we've still got a lot to refine!
+        </p>
+        <p>
+          Bye for now, <a href="https://twitter.com/Cj1mck">Chris</a> and <a href="https://twitter.com/_C4R15">Chris</a>
+          <center><img style="height: 80px;" src="assets/graphics/logo.png"></center>
+        </p>
+
+        </div>
+    </div>
+    <div rel="buttons">
+        <button class="btn" onclick="w2popup.close()">Continue</button>
+    </div>
+</div>
+
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+  </body>
+</html>

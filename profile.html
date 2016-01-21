@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LanPlan | Profile</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/graphics/joys.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaPAdkoZeLTO5AttyBl_1SJ3mj-Pa0xgs"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/loggedInCheck.js"></script>
+  </head>
+
+  <body>
+    <header class="header" id="headerContainer">
+      <div id="header" class="container">
+        <a href="create.html"><img class="add" title="Create Your Own Party/ Create Your Own Team" data-toggle="tooltip" data-placement="bottom" id="add" src="assets/graphics/add.png" onmouseover="this.src='assets/graphics/addhov.png'" onmouseout="this.src='assets/graphics/add.png'"></a>
+        <a href="profile.html" ><img class="img-circle" title="View Your Profile" data-toggle="tooltip" data-placement="bottom" id="profPic" src="assets/graphics/def_profile.png"></a>
+        <ul id="navBar" class="nav nav-tabs" role="tablist">
+          <li type="button" class="btn" title="Go Home" data-toggle="tooltip" data-placement="bottom"><a href="index.html">Home</a></li>
+          <li type="button" class="btn" title="Sign In/ Switch Acc." data-toggle="tooltip" data-placement="bottom"><a href="log_in.html">Sign In</a></li>
+          <li type="button" class="btn" title="View Your Teams" data-toggle="tooltip" data-placement="bottom"><a href="teams.html">Your Teams</a></li>
+          <li type="button" class="btn" title="View Your Upcoming Events" data-toggle="tooltip" data-placement="bottom"><a href="events.html">Upcoming Events</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="navbuttonsdd" data-toggle="dropdown">Navigation
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="log_in.html">Sign In</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="teams.html">Your Teams</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="events.html">Upcoming Events</a></li>
+            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="profile.html">Your Profile</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="create.html">Create a Party/Team</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <a href="rarepepe.html"><img id="logo" src="assets/graphics/logo.png"></a>
+        <h1 id="titleBig">LanPlan <strong>| Profile</strong></h1>
+        <h2 id="titleSmall"><strong>Profile</strong></h2>
+        <p id="slogan">Be <strong>anti-</strong>anti-social.</p>
+      </div>
+    </header>
+
+    <div class="profContainer">
+      <div id="profPicCont">
+        <img class="img-circle" id="profilePageImg" src="http://avatars.io/twitter/">
+      </div>
+      <div id="profHead">
+        <h1 id="profName"><a id="tProf" href="http://c4r15.github.io/log_in.html">Not logged in.</a></h1>
+        <div id="reps">
+          <span id="friendlyRep" data-toggle="tooltip" title="Friendly Reputaion" class="glyphicon glyphicon-thumbs-up"> loading &nbsp;&nbsp;</span><span id="hostRep" data-toggle="tooltip" title="Hosting Reputaion" class="glyphicon glyphicon-bullhorn"> loading &nbsp;&nbsp;</span><span id="mvps" data-toggle="tooltip" title="MVPs" class="glyphicon glyphicon-star-empty"> loading</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="footerWrapper">
+      <div id="footer">
+        <span id="dev">Developed by <strong><a href="https://twitter.com/_C4R15" target="_blank">@_C4R15</a></strong> and <strong><a href="https://twitter.com/Cj1mck" target="_blank">@Cj1mck</a></strong>.</span>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/profileInfo.js"></script>
+  </body>
+</html>

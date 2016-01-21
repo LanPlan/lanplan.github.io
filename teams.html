@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LanPlan | Teams</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/graphics/joys.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaPAdkoZeLTO5AttyBl_1SJ3mj-Pa0xgs"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/loggedInCheck.js"></script>
+  </head>
+
+  <body>
+    <header class="header" id="headerContainer">
+      <div id="header" class="container">
+        <a href="create.html"><img class="add" title="Create Your Own Party/ Create Your Own Team" data-toggle="tooltip" data-placement="bottom" id="add" src="assets/graphics/add.png" onmouseover="this.src='assets/graphics/addhov.png'" onmouseout="this.src='assets/graphics/add.png'"></a>
+        <a href="profile.html" ><img class="img-circle" title="View Your Profile" data-toggle="tooltip" data-placement="bottom" id="profPic" src="assets/graphics/def_profile.png"></a>
+        <ul id="navBar" class="nav nav-tabs" role="tablist">
+          <li type="button" class="btn" title="Go Home" data-toggle="tooltip" data-placement="bottom"><a href="index.html">Home</a></li>
+          <li type="button" class="btn" title="Sign In/ Switch Acc." data-toggle="tooltip" data-placement="bottom"><a href="log_in.html">Sign In</a></li>
+          <li type="button" class="btn" title="View Your Teams" data-toggle="tooltip" data-placement="bottom"><a href="teams.html"><strong>Your Teams</strong></a></li>
+          <li type="button" class="btn" title="View Your Upcoming Events" data-toggle="tooltip" data-placement="bottom"><a href="events.html">Upcoming Events</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="navbuttonsdd" data-toggle="dropdown">Navigation
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="log_in.html">Sign In</a></li>
+            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="teams.html">Your Teams</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="events.html">Upcoming Events</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="profile.html">Your Profile</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="create.html">Create a Party/Team</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <a href="rarepepe.html"><img id="logo" src="assets/graphics/logo.png"></a>
+        <h1 id="titleBig">LanPlan <strong>| Your Teams</strong></h1>
+        <h2 id="titleSmall"><strong>Your Teams</strong></h2>
+        <p id="slogan">Be <strong>anti-</strong>anti-social.</p>
+      </div>
+    </header>
+
+    <div id="teamsTable"></div>
+
+    <div id="footerWrapper">
+      <div id="footer">
+        <span id="dev">Developed by <strong><a href="https://twitter.com/_C4R15" target="_blank">@_C4R15</a></strong> and <strong><a href="https://twitter.com/Cj1mck" target="_blank">@Cj1mck</a></strong>.</span>
+      </div>
+    </div>
+
+    <script>
+    var xmlhttp = new XMLHttpRequest();
+    var url = "assets/JSON/fakeTeams.json";
+
+    xmlhttp.onreadystatechange=function() {
+         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+           parseEvents(xmlhttp.responseText);
+         }
+     }
+     xmlhttp.open("GET", url, true);
+     xmlhttp.send();
+
+    function parseEvents(response) {
+        var arr = JSON.parse(response);
+        var i;
+        var out = "<table id='eventsTbl' class='table table-striped' data-toggle='table'><tr><th data-field='team_name'>Team Name</th><th data-field='game'>Game</th><th data-field='current_players'>Current Members</th><th data-field='max_players'>Member Slots</th><tr>";
+
+        for(i = 0; i < arr.length; i++) {
+            out += "<td>" +
+            arr[i].team_name +
+            "</td><td>" +
+            arr[i].game +
+            "</td><td>" +
+            arr[i].current_players +
+            "</td><td>" +
+            arr[i].max_players +
+            "</td></tr>";
+        }
+        out += "</table>";
+        document.getElementById("teamsTable").innerHTML = out;
+    }
+
+    function getCookie(c_name){
+        var c_value = document.cookie;
+        var c_start = c_value.indexOf(" " + c_name + "=");
+        if (c_start == -1){
+            c_start = c_value.indexOf(c_name + "=");
+        }
+        if (c_start == -1){
+            c_value = null;
+        }else{
+            c_start = c_value.indexOf("=", c_start) + 1;
+            var c_end = c_value.indexOf(";", c_start);
+            if (c_end == -1){
+                c_end = c_value.length;
+            }
+            c_value = unescape(c_value.substring(c_start,c_end));
+        }
+        return c_value;
+    }
+    </script>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+  </body>
+</html>

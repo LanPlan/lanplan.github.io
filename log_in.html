@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LanPlan | Login</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/graphics/joys.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap-social.css">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/loggedInCheck.js"></script>
+    <script type="text/javascript" src="js/codebird.js"></script>
+    <script type="text/javascript" src="js/twitter_login.js"></script>
+  </head>
+
+  <body>
+    <header class="header" id="headerContainer">
+      <div id="header" class="container">
+        <a href="create.html"><img class="add" title="Create Your Own Party/ Create Your Own Team" data-toggle="tooltip" data-placement="bottom" id="add" src="assets/graphics/add.png" onmouseover="this.src='assets/graphics/addhov.png'" onmouseout="this.src='assets/graphics/add.png'"></a>
+        <a href="profile.html" ><img class="img-circle" title="View Your Profile" data-toggle="tooltip" data-placement="bottom" id="profPic" src="assets/graphics/def_profile.png"></a>
+        <ul id="navBar" class="nav nav-tabs" role="tablist">
+          <li type="button" class="btn" title="Go Home" data-toggle="tooltip" data-placement="bottom"><a href="index.html">Home</a></li>
+          <li type="button" class="btn" title="Sign In/ Switch Acc." data-toggle="tooltip" data-placement="bottom"><a href="log_in.html"><strong>Sign In</strong></a></li>
+          <li type="button" class="btn" title="View Your Teams" data-toggle="tooltip" data-placement="bottom"><a href="teams.html">Your Teams</a></li>
+          <li type="button" class="btn" title="View Your Upcoming Events" data-toggle="tooltip" data-placement="bottom"><a href="events.html">Upcoming Events</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="navbuttonsdd" data-toggle="dropdown">Navigation
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="log_in.html">Sign In</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="teams.html">Your Teams</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="events.html">Upcoming Events</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="profile.html">Your Profile</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="create.html">Create a Party/Team</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <a href="rarepepe.html"><img id="logo" src="assets/graphics/logo.png"></a>
+        <h1 id="titleBig">LanPlan <strong>| Sign In</strong></h1>
+        <h2 id="titleSmall"><strong>Sign In</strong></h2>
+        <p id="slogan">Be <strong>anti-</strong>anti-social.</p>
+      </div>
+    </header>
+
+    <h1 id="signin"><center>Sign in with <b>Twitter</b></center></h1>
+
+    <div class="container" id="buttonContainer">
+      <a class="btn btn-social-icon btn-twitter" id="twitterButton" data-toggle="tooltip" title="Login with Twitter" onclick="signIn();">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </div>
+
+    <div id="footerWrapper">
+      <div id="footer">
+        <span id="dev">Developed by <strong><a href="https://twitter.com/_C4R15" target="_blank">@_C4R15</a></strong> and <strong><a href="https://twitter.com/Cj1mck" target="_blank">@Cj1mck</a></strong>.</span>
+      </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+  </body>
+</html>
